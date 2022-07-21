@@ -151,7 +151,7 @@ function renderDetails(e) {
     </div>
     </div>
     
-
+s
 </div>
 
 `;
@@ -161,7 +161,6 @@ function renderDetails(e) {
 //   function testing(e) {
 //     console.log(e.target.parentNode.childNodes[9])
 //   }
-
 
 //This won't execute unless I refresh the window, because the script only executes once when the window loggs
 const btnSeeDetails = document.getElementsByClassName("seeDetails");
@@ -177,10 +176,7 @@ const addClickListener = () => {
   }
 };
 
-<<<<<<< HEAD
-=======
 //I had to create another function to render the 'rendershop' in order to be able to add the addEventListeners again
->>>>>>> origin/main
 const renderAfterBack = () => {
   renderShop();
   const btnSeeDetails = document.getElementsByClassName("seeDetails");
