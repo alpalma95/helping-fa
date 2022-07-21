@@ -112,6 +112,24 @@ function updateTotal() {
     let quantity = quantityItem.value;
     total = total + price * quantity;
 
+ //Total
+ function updateTotal(){
+    let cartContent = document.getElementsByClassName("cart-content")[0]
+    let cartBoxes = cartContent.getElementsByClassName("cart-box")
+    let total = 0;
+    for (let i = 0; i < cartBoxes.length; i++) {
+        let cartBox = cartBoxes[i];
+        let priceItem = cartBox.getElementsByClassName("cart-price")[0]
+        let quantityItem = cartBox.getElementsByClassName("cart-quantity")[0]
+        let price = parseInt(priceItem.innerText.replace("$", ""));
+        let quantity = quantityItem.value;
+        total = total + (price * quantity);
+       
+        document.getElementsByClassName("total-price")[0].innerText = "$" + total;
+    }
+    if (cartBoxes.length == 0) {
+        total = 0;
+    }
     document.getElementsByClassName("total-price")[0].innerText = "$" + total;
-  }
-}
+  
+ }
