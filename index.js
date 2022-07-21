@@ -1,8 +1,7 @@
+const rootElem = document.getElementById("root");
 
-const rootElem = document.getElementById('root')
-
-function renderShop(){
-const shopContent = `
+function renderShop() {
+  const shopContent = `
 <div class="hero">
            
 </div>
@@ -106,25 +105,22 @@ const shopContent = `
 
 
 </div>
-`
-rootElem.innerHTML = shopContent;
-
+`;
+  rootElem.innerHTML = shopContent;
 }
 
 renderShop();
 
-
-
 function renderDetails(e) {
-    const info = e.target.parentNode.childNodes;
-const detailsView =`
+  const info = e.target.parentNode.childNodes;
+  const detailsView = `
 <h3 class="categorySelect">Home /Medicaments</h3>
 <div class="prodPage">
 <div class="prodBox">
 
     <img src=${info[1].src} width="350px" height="320px" id="prodImage">
     <i class="fa-solid fa-left"></i>
-    <button class="backBtn" onclick="renderShop()">
+    <button class="backBtn" onclick="renderAfterBack()">
     Go back</button>
     </div>
   
@@ -158,19 +154,34 @@ const detailsView =`
 
 </div>
 
-`
-rootElem.innerHTML = detailsView;
+`;
+  rootElem.innerHTML = detailsView;
 }
 
 //   function testing(e) {
 //     console.log(e.target.parentNode.childNodes[9])
 //   }
 
-
-const btnSeeDetails = document.getElementsByClassName('seeDetails')
-console.log(btnSeeDetails)
+const btnSeeDetails = document.getElementsByClassName("seeDetails");
 
 for (let index = 0; index < btnSeeDetails.length; index++) {
-    btnSeeDetails[index].addEventListener("click", renderDetails)
-  
+  btnSeeDetails[index].addEventListener("click", renderDetails);
 }
+
+const addClickListener = () => {
+  for (let i = 0; i < addCart.length; i++) {
+    let button = addCart[i];
+    button.addEventListener("click", addCartClicked);
+  }
+};
+
+const renderAfterBack = () => {
+  renderShop();
+  const btnSeeDetails = document.getElementsByClassName("seeDetails");
+  let addCart = document.getElementsByClassName("add-cart");
+
+  for (let index = 0; index < btnSeeDetails.length; index++) {
+    btnSeeDetails[index].addEventListener("click", renderDetails);
+  }
+  addClickListener();
+};

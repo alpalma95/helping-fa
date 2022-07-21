@@ -1,0 +1,382 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--text-color--);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  padding: 0;
+}
+
+section {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+li {
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+div {
+  font-size: 20px;
+}
+
+.menu {
+  background-color: rgb(66, 103, 203);
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+.menu a {
+  color: white;
+}
+.menu a:link {
+  text-decoration: none;
+}
+
+.prod {
+  font-size: 25px;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.prod:hover {
+  color: rgb(210, 19, 16);
+}
+
+.dropdown {
+  position: relative;
+}
+.dropdown .link {
+  color: black;
+  font-size: 22px;
+}
+.dropdown .link:hover {
+  color: blue;
+  font-weight: bold;
+}
+
+.dropdown-menu {
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 7px rgb(0, 0, 0);
+  opacity: 0;
+  width: 350px;
+  height: 220px;
+}
+
+.dropdown > .prod:focus + .dropdown-menu {
+  opacity: 1;
+}
+
+i {
+  padding-left: 20px;
+}
+
+.dropdown-menu1, .dropdown-menu2, .dropdown-menu3, .dropdown-menu4, .dropdown-menu5 {
+  display: none;
+}
+.dropdown-menu1 ul, .dropdown-menu2 ul, .dropdown-menu3 ul, .dropdown-menu4 ul, .dropdown-menu5 ul {
+  list-style: none;
+}
+.dropdown-menu1 ul li, .dropdown-menu2 ul li, .dropdown-menu3 ul li, .dropdown-menu4 ul li, .dropdown-menu5 ul li {
+  font-size: 20px;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu1 {
+  font-size: 20px;
+  display: block;
+  position: absolute;
+  left: 250px;
+  background-color: white;
+  width: 200px;
+  border-radius: 4px;
+  box-shadow: 0 4px 7px rgb(0, 0, 0);
+  padding: 15px;
+  cursor: pointer;
+  left: 220px;
+  top: 10px;
+}
+.dropdown-menu ul li:hover .dropdown-menu1 a {
+  color: black;
+}
+.dropdown-menu ul li:hover .dropdown-menu1 li:hover {
+  background-color: blue;
+  color: white;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu3 {
+  font-size: 20px;
+  display: block;
+  position: absolute;
+  left: 250px;
+  background-color: white;
+  width: 200px;
+  border-radius: 4px;
+  box-shadow: 0 4px 7px rgb(0, 0, 0);
+  padding: 15px;
+  cursor: pointer;
+  top: 30px;
+  left: 200px;
+}
+.dropdown-menu ul li:hover .dropdown-menu3 a {
+  color: black;
+}
+.dropdown-menu ul li:hover .dropdown-menu3 li:hover {
+  background-color: blue;
+  color: white;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu4 {
+  font-size: 20px;
+  display: block;
+  position: absolute;
+  left: 250px;
+  background-color: white;
+  width: 200px;
+  border-radius: 4px;
+  box-shadow: 0 4px 7px rgb(0, 0, 0);
+  padding: 15px;
+  cursor: pointer;
+  top: 60px;
+  left: 300px;
+}
+.dropdown-menu ul li:hover .dropdown-menu4 a {
+  color: black;
+}
+.dropdown-menu ul li:hover .dropdown-menu4 li:hover {
+  background-color: blue;
+  color: white;
+}
+
+.dropdown-menu ul li:hover .dropdown-menu5 {
+  font-size: 20px;
+  display: block;
+  position: absolute;
+  left: 250px;
+  background-color: white;
+  width: 200px;
+  border-radius: 4px;
+  box-shadow: 0 4px 7px rgb(0, 0, 0);
+  padding: 15px;
+  cursor: pointer;
+  top: 100px;
+  left: 200px;
+}
+.dropdown-menu ul li:hover .dropdown-menu5 a {
+  color: black;
+}
+.dropdown-menu ul li:hover .dropdown-menu5 li:hover {
+  background-color: blue;
+  color: white;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  background-repeat: no-repeat;
+  height: 600px;
+  background-image: url("images/Health.jpg");
+  background-size: cover;
+}
+
+.top {
+  text-align: center;
+}
+
+.top-products {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.product1, .product2, .product3 {
+  margin: 5px;
+  border: 1px solid rgb(210, 210, 251);
+  width: 280px;
+  height: 320px;
+  position: relative;
+}
+
+.button {
+  position: absolute;
+  bottom: 10%;
+  left: 30%;
+  background-color: rgb(223, 247, 247);
+  border: 2px solid rgb(195, 195, 241);
+  color: rgb(185, 180, 180);
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.prod-categories {
+  list-style-type: none;
+}
+
+.hamburger-menu {
+  color: white;
+  padding: 5px;
+}
+
+.summer {
+  text-align: center;
+  color: black;
+  margin-bottom: 2rem;
+}
+
+.shop {
+  padding: 30px;
+  background-color: rgb(240, 250, 254);
+  margin-top: 2rem;
+}
+
+.shop-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+  gap: 3rem;
+}
+
+.product-box {
+  position: relative;
+  border: 1px solid rgb(159, 152, 152);
+  background-color: white;
+  height: 300px;
+  width: 220px;
+  cursor: pointer;
+}
+
+.prod-img {
+  width: 140px;
+  height: 140px;
+  margin-bottom: 0.25rem;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.prod-title {
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  margin-top: 15px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.price {
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+}
+
+.seeDetails {
+  width: 120px;
+  height: 30px;
+  background: rgb(212, 212, 240);
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 50px;
+  padding: 5px;
+  border: 1px solid rgb(190, 184, 184);
+  cursor: pointer;
+}
+.seeDetails a {
+  text-decoration: none;
+}
+
+footer {
+  height: 200px;
+  background-color: rgb(66, 103, 203);
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  color: white;
+}
+footer .footer-title {
+  margin-bottom: 10px;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li {
+  font-size: medium;
+  font-weight: lighter;
+  color: white;
+  padding: 2px;
+}
+footer ul li a {
+  color: white;
+  font-size: medium;
+}
+footer ul .social-media {
+  display: inline-flex;
+  padding: 10px;
+}
+footer ul .social-media li {
+  font-size: 20px;
+  cursor: pointer;
+}
+footer .copyright {
+  display: flex;
+  align-items: center;
+}
+footer .copyright p {
+  font-size: small;
+}
+
+.backBtn {
+  padding: 5px;
+  margin: 10px;
+  margin-top: 55px;
+  margin-left: 100px;
+  width: 100px;
+  height: 35px;
+  background: rgb(212, 212, 240);
+  border-radius: 10%;
+  border: 1px solid rgb(97, 97, 134);
+  cursor: pointer;
+  color: black;
+  font-size: 20px;
+}
+
+.categorySelect {
+  padding: 10px;
+  margin: 15px;
+  margin-left: 40px;
+  color: rgb(182, 171, 171);
+}/*# sourceMappingURL=main.css.map */
