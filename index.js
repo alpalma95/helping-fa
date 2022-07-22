@@ -1,4 +1,18 @@
 const rootElem = document.getElementById("root");
+let loggedUser = localStorage.getItem("loggedUser") || null;
+console.log(loggedUser);
+const registerBtn = document.getElementById("register-btn");
+const loginBtn = document.getElementById("login-btn");
+
+const logout = () => {
+  localStorage.removeItem("loggedUser");
+  location.href = "/login.html";
+};
+
+if (loggedUser) {
+  registerBtn.innerHTML = `<p>Welcome, ${JSON.parse(loggedUser).name}</p>`;
+  loginBtn.innerHTML = `<button onclick="logout()">Logout</button>`;
+}
 
 function renderShop() {
   const shopContent = `
@@ -164,11 +178,10 @@ s
 
 //This won't execute unless I refresh the window, because the script only executes once when the window loggs
 const btnSeeDetails = document.getElementsByClassName("seeDetails");
-const detailsButtonn = document.getElementsByClassName("detailsBtn")
+const detailsButtonn = document.getElementsByClassName("detailsBtn");
 
 for (let index = 0; index < btnSeeDetails.length; index++) {
   btnSeeDetails[index].addEventListener("click", renderDetails);
-  detailsButtonn[index].addEventListener("click", renderDetails);
 }
 
 const addClickListener = () => {

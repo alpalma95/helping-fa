@@ -1,4 +1,3 @@
-
 const username = document.getElementById("name");
 const email = document.getElementById("email");
 const pass = document.getElementById("password");
@@ -19,8 +18,6 @@ const userSignup = () => {
       })
     );
     alert("Successful signup!");
-    // Simulate an HTTP redirect:
-    window.location.replace = ("http://127.0.0.1:5500/login.html");
+    location.href = "/login.html";
   }
 };
-
